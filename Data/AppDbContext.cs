@@ -10,7 +10,7 @@ namespace Itau_invest.Data
 
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Ativo> Ativo { get; set; }
-        public DbSet<Operacao> Operacao { get; set; }
+        public DbSet<Operacao> Operacoes { get; set; }
         public DbSet<Cotacao> Cotacao { get; set; }
         public DbSet<Posicao> Posicao { get; set; }
     }
