@@ -20,9 +20,9 @@ namespace Itau_invest.Services
             return await _context.Operacoes.ToListAsync();
         }
 
-        public async Task<Operacao> GetByIdAsync(int id)
+        public async Task<Operacao> GetByIdAsync(int idOperacao)
         {
-            return await _context.Operacoes.FindAsync(id);
+            return await _context.Operacoes.FindAsync(idOperacao);
         }
 
         public async Task<Operacao> CreateAsync(Operacao operacao)
@@ -32,9 +32,9 @@ namespace Itau_invest.Services
             return operacao;
         }
 
-        public async Task<bool>UpdateAsync(int id, Operacao operacao)
+        public async Task<bool>UpdateAsync(int idOperacao, Operacao operacao)
         {
-            if (id != operacao.IdOperacao)
+            if (idOperacao != operacao.IdOperacao)
             return false;
 
             _context.Entry(operacao).State = EntityState.Modified;
